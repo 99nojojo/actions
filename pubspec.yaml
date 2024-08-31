@@ -61,6 +61,7 @@ dependencies:
   #缓存需要的路径
   # path_provider: 2.1.1
   json_annotation: 4.8.1
+  #使用最新的3.4.0  自动打包无法编译成功
   easy_refresh: 3.3.5
   flutter_swiper_null_safety: 1.0.2
   cached_network_image: 3.2.3
