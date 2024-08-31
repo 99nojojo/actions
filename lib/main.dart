@@ -20,23 +20,24 @@ class MyApp extends StatelessWidget   {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return ScreenUtilInit(
-      minTextAdapt: true,
-      splitScreenMode: true,
-      //pxCook显示的小米8截图，xxxhdpi 270x570
-      designSize: const Size(270, 570),
-      builder: (context, child) {
-        return GetMaterialApp(
-          // debugShowCheckedModeBanner: false,
-          title: 'Flutter Demo',
-          theme: GlobalThemData.lightThemeData,
-          darkTheme: GlobalThemData.darkThemeData,
-          defaultTransition: Transition.rightToLeft,
-          transitionDuration: const Duration(milliseconds: 500),
-          initialRoute: RoutePath.initialRoute,
-          getPages: Routes.pages,
-        );
-      },
+    // return ScreenUtilInit(
+    //   minTextAdapt: true,
+    //   splitScreenMode: true,
+    //   //pxCook显示的小米8截图，xxxhdpi 270x570
+    //   designSize: const Size(270, 570),
+    //   builder: (context, child) {
+    //     return ;
+    //   },
+    // );
+    return GetMaterialApp(
+      // debugShowCheckedModeBanner: false,
+      title: 'Flutter Demo',
+      theme: GlobalThemData.lightThemeData,
+      darkTheme: GlobalThemData.darkThemeData,
+      defaultTransition: Transition.rightToLeft,
+      transitionDuration: const Duration(milliseconds: 500),
+      initialRoute: RoutePath.initialRoute,
+      getPages: Routes.pages,
     );
   }
 }
