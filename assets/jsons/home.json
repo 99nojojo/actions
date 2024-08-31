@@ -1,0 +1,46 @@
+{
+    "top": [
+        {
+            "title": "驾校排行",
+            "image": "https://smart-789.mc-cdn.cn/advert-image/2022/06/30/13/f196f5afab6844e8be65d477856518c8.png?width=92&height=92"
+        },
+        {
+            "title": "教练排行",
+            "image": "https://smart-789.mc-cdn.cn/advert-image/2022/06/30/13/8257fe7ac0b04ebea1b230fa825fbe41.png?width=92&height=92"
+        },
+        {
+            "title": "查学车价",
+            "image": "https://smart-789.mc-cdn.cn/advert-image/2023/01/09/19/bd49cbcd5a59475584464f3c09aa1dbf.png?width=92&height=92"
+        },
+        {
+            "title": "我的需求",
+            "image": "https://smart-789.mc-cdn.cn/advert-image/2022/06/30/13/c710bfcc7bc74dd9a7caed249bb8d3da.png?width=92&height=92"
+        },
+        {
+            "title": "地图学车",
+            "image": "https://smart-789.mc-cdn.cn/advert-image/2023/01/09/19/7b440c6675d143d49433a4c808063d91.png?width=92&height=92"
+        }
+    ],
+    "center": [
+        {
+            "title": "新手驾到",
+            "image": "https://smart-789.mc-cdn.cn/advert-image/2022/11/01/14/4d7c5b551a2f414c971e21c82534cfcf.png?width=336&height=120",
+            "url": "https://share-m.kakamobi.com/activity.kakamobi.com/jiaxiaozhijia-pay-activity/?spaceId=471&advertId=50097&resourceId=44626"
+        },
+        {
+            "title": "甄选教练",
+            "image": "https://smart-789.mc-cdn.cn/advert-image/2023/01/12/11/0f92fe6318da49e3883bd175b18c0462.jpg?width=336&height=120",
+            "url": "https://web-app.kakamobi.cn/437c0ff1a35d6ca63c82893340bed51f?spaceId=471&advertId=50098&resourceId=44627"
+        }
+    ],
+    "bottom": {
+        "title": "帮我找驾校",
+        "image": "https://smart-789.mc-cdn.cn/advert-image/2022/08/29/18/eb384ecc857c4712b58d1093ec2c6894.png?width=750&height=148",
+        "url": "https://web-app.kakamobi.cn/22d6d154f40a1cd63a84f14b9f6133f9?spaceId=449&advertId=50094&resourceId=44623"
+    },
+    "float": {
+        "title": "帮我找驾校",
+        "image": "http://smart-789.image.mucang.cn/advert-image/2021/09/15/13/2b43b51b73f04ed48a85730eb9727511.png?width=200&height=200",
+        "url": "https://web-app.kakamobi.cn/8899c94d1fe10cc613ad40fae618448e?spaceId=125&advertId=49241&resourceId=43674"
+    }
+}

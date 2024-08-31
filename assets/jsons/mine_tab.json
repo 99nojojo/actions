@@ -1,0 +1,46 @@
+{
+  "itemList": [
+    {
+      "clickUrl": "https://jiakao.nav.mucang.cn/eventWithLogin?redirectUrl=http://jiakao.nav.mucang.cn/mine/award",
+      "icon": "https://jiakao-web.mc-cdn.cn/jiakao-web/2023/01/04/18/9ccf236b069140e392a409b21be7f064.png",
+      "name": "我的奖品",
+      "tagName": ""
+    },
+    {
+      "clickUrl": "https://jiakao.nav.mucang.cn/eventWithLogin?redirectUrl=http://jiakao.nav.mucang.cn/mine/order",
+      "icon": "https://jiakao-web.mc-cdn.cn/jiakao-web/2023/01/04/18/103befda9db6464fa040ca3842015f97.png",
+      "name": "我的订单",
+      "tagName": ""
+    },
+    {
+      "clickUrl": "https://jiakao.nav.mucang.cn/eventWithLogin?redirectUrl=http://jiakao.nav.mucang.cn/mine/coupon",
+      "icon": "https://jiakao-web.mc-cdn.cn/jiakao-web/2023/01/05/10/dd2b2520f22f45dab90ce244cf5db815.png",
+      "name": "我的优惠券",
+      "tagName": ""
+    },
+    {
+      "clickUrl": "https://jiakao.nav.mucang.cn/eventWithLogin?redirectUrl=http://jiakao.nav.mucang.cn/my-publish",
+      "icon": "https://jiakao-web.mc-cdn.cn/jiakao-web/2023/01/05/10/1eee732fdcea45f19613a76c8f47a5f9.png",
+      "name": "我的发表",
+      "tagName": ""
+    },
+    {
+      "clickUrl": "http://jiakao.nav.mucang.cn/mine/give_a_like",
+      "icon": "https://jiakao-web.mc-cdn.cn/jiakao-web/2023/01/04/18/adc9a82fcc954c3290fa730b583ca64f.png",
+      "name": "给app点赞",
+      "tagName": ""
+    },
+    {
+      "clickUrl": "https://laofuzi.kakamobi.com/jkbd-qa/index.html",
+      "icon": "https://jiakao-web.mc-cdn.cn/jiakao-web/2023/01/04/18/4b12ee0d9e744324bd356a138691de9d.png",
+      "name": "帮助与反馈",
+      "tagName": ""
+    },
+    {
+      "clickUrl": "http://jiakao.nav.mucang.cn/mine/setting",
+      "icon": "https://jiakao-web.mc-cdn.cn/jiakao-web/2023/01/04/18/4616a2c0a9044aeaba510a118b8372f5.png",
+      "name": "设置",
+      "tagName": ""
+    }
+  ]
+}
