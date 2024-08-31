@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - master
-
 jobs:
   flutter_test:
     name: Run flutter test and analyze
