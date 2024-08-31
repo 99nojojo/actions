@@ -1,0 +1,81 @@
+1、flutter packages run build_runner build   生成命令
+
+2、JsonToDart  Ankit mahadik这个Android studio的插件最好用
+3、Column、WebView、ListView  需要指定一个高，外层可以套SizedBox或者Expanded 否则会提示hasSize异常
+4、使用flutter_swiper时遇到
+_AssertionError ('package:flutter/src/widgets/scroll_controller.dart': Failed assertion: line 107 pos 12: '_positions.isNotEmpty': ScrollController not attached to any scroll views.
+
+Swiper组建要添加key 设置为GlobalKey()
+
+5、Expanded等设计权重的组建要和column/row配合使用
+
+6、使用CustomScrollView时，应该将每个独立的小模块都用对应的Slive组建去封装,并且组建的间距不要使用padding，尽量使用margin否则会出现
+卡断现象
+
+7、NestedScrollView可以解决CustomScrollView嵌套PageView(嵌套ListView）无法全部显示item的问题，还有注意点是：
+NestedScrollView与CustomScrollView作为外部View时，如果内部嵌套的ListView添加了ScrollController那么就会出现列表显示不全
+
+8. 
+初始化状态库时
+a、Get.put(TabHomeController()) 这样写正确
+
+b、TabHomeController? stateController; 
+//在initState或者build函数中
+TabHomeController stateControlle= Get.put(TabHomeController()); 
+
+这样写会爆莫名其妙的错误
+════════ Exception caught by rendering library ═════════════════════════════════
+The following _CastError was thrown during performLayout():
+Null check operator used on a null value
+
+9、
+PageStorageKey是用来缓存不同的滚动组件的滚动状态的，AutomaticKeepAliveClientMixin是用来缓存Element，也就是
+页面的，TabBar + TabBarView是配合使用的。对于比较复杂的页面：比如刷新嵌套滚动组件时，PageStorageKey是不能和AutomaticKeepAliveClientMixin
+同时使用的，这样会导致每个滚动组件的滚动状态被干扰。
+
+
+10
+如果使用GetX却没有使用其中的controller 那就会报下面的错误
+GET the improper use of a getx has been detected you should only use getx or obx for the specific widget that will be updated.
+ if you are seeing this error, you probabaly did not insert any observable variables into GetX/Obx...
+
+
+11、在EasyRefresh中嵌套了竖直的ListView,再内嵌横向的LitView，为避免横向的ListView干扰外部的ListView去出发刷新与加载更多时，要
+设置   physics: const ClampingScrollPhysics(),
+
+12、买车页面
+优化嵌套粘性标题的列表
+https://www.saoniuhuo.com/question/detail-2687916.html
+
+13  Xcode 报错：”Module ‘..... ‘ not found“
+1:删除podfile 和podfile.lock文件
+2:cd ios
+3:flutter clean
+4:flutter pub get
+5:pod install
+
+14、上面第5步骤出现问题
+[!] CocoaPods did not set the base configuration of your project because your project already has a custom config
+ set. In order for CocoaPods integration to work at all, please either set the base configurations of the target `
+ Runner` to `Target Support Files/Pods-Runner/Pods-Runner.profile.xcconfig` or include the `Target Support Files/Pods-Runner/Pods-Runner.profile.xcconfig` in your build configuration (`Flutter/Release.xcconfig`).
+
+ 解决方案
+ https://www.jianshu.com/p/e8e0bd558f6c
+
+ [!] Automatically assigning platform `iOS` with version `11.0` on target `Runner` because no platform was specified. Please specify a platform for this target in your Podfile. See `https://guides.cocoapods.org/syntax/podfile.html#platform`.
+ 解决方案  将ios目录下的Podfile中   platform :ios, '11.0' 这句注释打开
+
+ 15、图片要做背景并且要填充状态栏 要设置fit: BoxFit.cover ，不然会出现白边
+ const BoxDecoration(
+              image: DecorationImage(
+            image: AssetImage(ICON_MINE_BG),
+            fit: BoxFit.cover,
+          ))
+
+
+ 16、Scanffold如果没有设置AppBar控件，那么body的第一个元素，就必须添加
+  MediaQuery.removeViewPadding(removeTop) 否则第一个元素的内容底部将无法显示全
+
+
+
+
