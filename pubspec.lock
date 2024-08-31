@@ -309,10 +309,10 @@ packages:
     dependency: "direct main"
     description:
       name: easy_refresh
-      sha256: "486e30abfcaae66c0f2c2798a10de2298eb9dc5e0bb7e1dba9328308968cae0c"
+      sha256: "3c36ff122e1b9139b4ba6c8c222b0b682eaf06ef3bfcaed1a883ce22909d6325"
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "3.4.0"
+    version: "3.3.5"
   easy_sticky_header:
     dependency: "direct main"
     description:
