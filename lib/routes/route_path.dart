@@ -17,5 +17,5 @@ abstract class RoutePath {
   static const Common_Setting = Setting + SettingC;
   static const JX_IMAGES = DETIAL + IMAGES;
 
-  static const initialRoute = TAB_NAV;
+  static const initialRoute = LOGIN_PWD;
 }
