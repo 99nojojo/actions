@@ -1,9 +1,10 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-// import 'package:flutter_actions/static/static.dart';
 import 'package:flutter_actions/utils/utils.dart';
 import 'package:rxdart/rxdart.dart';
+
+import '../static/res_constant.dart';
 
 ///搜索布局
 class SearchLayout extends StatefulWidget {
@@ -79,11 +80,11 @@ class _SearchLayoutState extends State<SearchLayout> {
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-          // Image.asset(
-          //   ICON_SEARCH,
-          //   width: 10.hx,
-          //   height: 10.hx,
-          // ),
+          Image.asset(
+            ICON_SEARCH,
+            width: 10.hx,
+            height: 10.hx,
+          ),
           4.hGap,
           StreamBuilder<String>(
               initialData: titleControler!.value,
