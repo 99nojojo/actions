@@ -6,7 +6,7 @@ on:
 
   build_appbundle:
     name: Build Flutter (Android)
-    needs: [flutter_test]
+#    needs: [flutter_test]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
