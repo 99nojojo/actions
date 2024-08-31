@@ -6,61 +6,61 @@ on:
       - main
 
 jobs:
-#  build_appbundle:
-#    name: Build Flutter (Android App Bundle)
-#    runs-on: ubuntu-latest
-#    steps:
-#      - uses: actions/checkout@v4
-#
-#      - name: Setup Java
-#        uses: actions/setup-java@v4
-#        with:
-#          java-version: "11"
-#          distribution: 'zulu'
-#
-#      - name: Setup Flutter
-#        uses: subosito/flutter-action@v2
-#        with:
-#          flutter-version: '3.7.0'
-#          channel: 'stable'
-#
-#      - run: flutter pub get
-#      - run: flutter clean
-#      - run: flutter build appbundle --release --verbose
-#
-#      - name: Upload App Bundle
-#        uses: actions/upload-artifact@v3
-#        with:
-#          name: app-release-bundle
-#          path: build/app/outputs/bundle/release/app-release.aab
-#
-#  build_apk:
-#    name: Build Flutter (APK)
-#    runs-on: ubuntu-latest
-#    steps:
-#      - uses: actions/checkout@v4
-#
-#      - name: Setup Java
-#        uses: actions/setup-java@v4
-#        with:
-#          java-version: "11"
-#          distribution: 'zulu'
-#
-#      - name: Setup Flutter
-#        uses: subosito/flutter-action@v2
-#        with:
-#          flutter-version: '3.7.0'
-#          channel: 'stable'
-#
-#      - run: flutter pub get
-#      - run: flutter clean
-#      - run: flutter build apk --release --verbose
-#
-#      - name: Upload APK
-#        uses: actions/upload-artifact@v3
-#        with:
-#          name: app-release-apk
-#          path: build/app/outputs/flutter-apk/app-release.apk
+  #  build_appbundle:
+  #    name: Build Flutter (Android App Bundle)
+  #    runs-on: ubuntu-latest
+  #    steps:
+  #      - uses: actions/checkout@v4
+  #
+  #      - name: Setup Java
+  #        uses: actions/setup-java@v4
+  #        with:
+  #          java-version: "11"
+  #          distribution: 'zulu'
+  #
+  #      - name: Setup Flutter
+  #        uses: subosito/flutter-action@v2
+  #        with:
+  #          flutter-version: '3.7.0'
+  #          channel: 'stable'
+  #
+  #      - run: flutter pub get
+  #      - run: flutter clean
+  #      - run: flutter build appbundle --release --verbose
+  #
+  #      - name: Upload App Bundle
+  #        uses: actions/upload-artifact@v3
+  #        with:
+  #          name: app-release-bundle
+  #          path: build/app/outputs/bundle/release/app-release.aab
+  #
+  #  build_apk:
+  #    name: Build Flutter (APK)
+  #    runs-on: ubuntu-latest
+  #    steps:
+  #      - uses: actions/checkout@v4
+  #
+  #      - name: Setup Java
+  #        uses: actions/setup-java@v4
+  #        with:
+  #          java-version: "11"
+  #          distribution: 'zulu'
+  #
+  #      - name: Setup Flutter
+  #        uses: subosito/flutter-action@v2
+  #        with:
+  #          flutter-version: '3.7.0'
+  #          channel: 'stable'
+  #
+  #      - run: flutter pub get
+  #      - run: flutter clean
+  #      - run: flutter build apk --release --verbose
+  #
+  #      - name: Upload APK
+  #        uses: actions/upload-artifact@v3
+  #        with:
+  #          name: app-release-apk
+  #          path: build/app/outputs/flutter-apk/app-release.apk
 
   build_ios:
     name: Build iOS IPA
@@ -87,15 +87,17 @@ jobs:
         run: flutter build ios --release --no-codesign
 
       # 如果你有付费开发者账号，可以使用以下步骤来签名和导出IPA文件
-      # - name: Export IPA
-      #   run: |
-      #     xcodebuild -exportArchive \
-      #       -archivePath build/ios/archive/MyApp.xcarchive \
-      #       -exportOptionsPlist ios/ExportOptions.plist \
-      #       -exportPath build/ios/ipa
-
+      #  allowProvisioningUpdates / allowProvisioningDeviceRegistration 是配置打包临时用于测试的ipa文件
+      - name: Export IPA
+        run: |
+          xcodebuild -exportArchive \
+            -archivePath build/ios/archive/MyApp.xcarchive \
+            -exportOptionsPlist ios/ExportOptions.plist \
+            -exportPath build/ios/ipa \ 
+            -allowProvisioningUpdates \
+            -allowProvisioningDeviceRegistration
       - name: Upload IPA
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: MyApp-IPA
           path: build/ios/ipa/*.ipa
