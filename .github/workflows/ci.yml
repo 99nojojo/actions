@@ -74,19 +74,25 @@ jobs:
           flutter-version: '3.7.0'
           channel: 'stable'
 
+      # Ensure Flutter dependencies are installed
+      - name: Flutter Pub Get
+        run: flutter pub get
+
+      # Install CocoaPods dependencies
       - name: Install CocoaPods
         run: pod install --project-directory=ios
 
+      # Build the iOS project
       - name: Build iOS
         run: flutter build ios --release --no-codesign
 
-      # 如果有付费开发者账号，使用以下步骤来签名和导出IPA文件
-      - name: Export IPA
-        run: |
-          xcodebuild -exportArchive \
-            -archivePath build/ios/archive/MyApp.xcarchive \
-            -exportOptionsPlist ios/ExportOptions.plist \
-            -exportPath build/ios/ipa
+      # 如果你有付费开发者账号，可以使用以下步骤来签名和导出IPA文件
+      # - name: Export IPA
+      #   run: |
+      #     xcodebuild -exportArchive \
+      #       -archivePath build/ios/archive/MyApp.xcarchive \
+      #       -exportOptionsPlist ios/ExportOptions.plist \
+      #       -exportPath build/ios/ipa
 
       - name: Upload IPA
         uses: actions/upload-artifact@v3
