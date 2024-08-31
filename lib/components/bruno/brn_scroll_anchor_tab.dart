@@ -18,7 +18,7 @@ class BrnAnchorTab extends StatefulWidget {
   ScrollController? scrollController;
 
   BrnAnchorTab(
-      {required this.widgetIndexedBuilder,
+      {super.key, required this.widgetIndexedBuilder,
       required this.itemCount,
       this.tabDivider,
       this.tabBarStyle = const BrnAnchorTabBarStyle()});

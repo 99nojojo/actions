@@ -32,6 +32,7 @@ class _SearchLayoutState extends State<SearchLayout> {
 
   @override
   void initState() {
+    super.initState();
     titleControler = BehaviorSubject<String>.seeded(widget.title);
     loopTitle();
   }
@@ -56,11 +57,13 @@ class _SearchLayoutState extends State<SearchLayout> {
 
   @override
   void didUpdateWidget(covariant SearchLayout oldWidget) {
+    super.didUpdateWidget(oldWidget);
     loopTitle();
   }
 
   @override
   void didChangeDependencies() {
+    super.didChangeDependencies();
     loopTitle();
   }
 
