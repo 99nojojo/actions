@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget   {
       designSize: const Size(270, 570),
       builder: (context, child) {
         return GetMaterialApp(
-          debugShowCheckedModeBanner: false,
+          // debugShowCheckedModeBanner: false,
           title: 'Flutter Demo',
           theme: GlobalThemData.lightThemeData,
           darkTheme: GlobalThemData.darkThemeData,
