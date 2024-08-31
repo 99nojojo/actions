@@ -19,4 +19,4 @@ on:
           flutter-version: 3.7.0
       - run: flutter pub get
       - run: flutter clean
-      - run: flutter build apk
+      - run: flutter build apk --release
